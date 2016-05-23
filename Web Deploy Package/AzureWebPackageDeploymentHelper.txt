@@ -1,0 +1,47 @@
+PS C:\> Add-AzureAccount
+WARNING: Microsoft Azure PowerShell collects data about how users use PowerShell cmdlets and some problems they
+encounter.  Microsoft uses this information to improve our PowerShell cmdlets.  Participation is voluntary and when you
+ choose to participate your device automatically sends information to Microsoft about how you use Azure PowerShell.
+
+If you choose to participate, you can stop at any time by using Azure PowerShell as follows:
+1. Use the Disable-AzureDataCollection cmdlet to turn the feature Off. The cmdlet can be found in the
+AzureResourceManager module
+To disable data collection: PS > Disable-AzureDataCollection
+
+If you choose to not participate, you can enable at any time by using Azure PowerShell as follows:
+1. Use the Enable-AzureDataCollection cmdlet to turn the feature On. The cmdlet can be found in the
+AzureResourceManager module
+To enable data collection: PS > Enable-AzureDataCollection
+
+Select Y to enable data collection [Y/N]:
+WARNING: You choose to participate in Microsoft Azure PowerShell data collection.
+WARNING: The setting profile has been saved to the following path
+'C:\Users\Srikant.Chandrasekar\AppData\Roaming\Windows Azure Powershell\AzureDataCollectionProfile.json'.
+
+Id                             Type       Subscriptions                          Tenants
+--                             ----       -------------                          -------
+srikant2121@hotmail.com        User       28ce018f-fe92-46e7-bcb5-6dfd23d767ff   {7d268c78-a874-434d-972c-7fba77ffc1ad}
+
+
+PS C:\> Get-AzureSubscription
+
+
+SubscriptionId            : 28ce018f-fe92-46e7-bcb5-6dfd23d767ff
+SubscriptionName          : Visual Studio Enterprise
+Environment               : AzureCloud
+DefaultAccount            : srikant2121@hotmail.com
+IsDefault                 : True
+IsCurrent                 : True
+TenantId                  : 7d268c78-a874-434d-972c-7fba77ffc1ad
+CurrentStorageAccountName :
+
+
+
+PS C:\> Publish-AzureWebsiteProject -Name 'webappEmpired101' -Package 'C:\Project\Empired\Azure\webApp101\Web Deploy Pac
+kage\webApp101.zip'
+PS C:\> Switch-AzureWebsiteSlot -Name 'webappEmpired101'
+
+Confirm
+Are you sure you want to swap the website 'webappEmpired101' slot 'Production' with slot 'dev'?
+[Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+PS C:\>
